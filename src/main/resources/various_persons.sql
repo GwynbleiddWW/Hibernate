@@ -1,6 +1,6 @@
 CREATE SCHEMA netology;
 
-CREATE TABLE netology.persons
+CREATE TABLE netology.various_persons
 (
     name           VARCHAR(255),
     surname        VARCHAR(255),
@@ -10,7 +10,7 @@ CREATE TABLE netology.persons
     CONSTRAINT firstKeyP PRIMARY KEY (name, surname, age)
 );
 
-INSERT INTO netology.persons
+INSERT INTO netology.various_persons
 VALUES ('Ben', 'Kenobi', 70, 66, 'Stewjon'),
        ('Vasya', 'Wasonkin', 18, 551477, 'Moscow');
 

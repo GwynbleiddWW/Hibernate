@@ -5,6 +5,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
+@org.springframework.stereotype.Repository
 public class Repository {
 
     @PersistenceContext

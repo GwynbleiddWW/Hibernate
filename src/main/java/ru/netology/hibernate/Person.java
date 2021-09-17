@@ -1,6 +1,8 @@
 package ru.netology.hibernate;
+import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.Hibernate;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -13,11 +15,11 @@ import java.util.Objects;
 @Setter
 @ToString
 @Entity
-@Table(name = "persons")
+@Table(name = "various_persons", schema = "netology")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Integer id;
 
     @Column(nullable = false)
     String name;
@@ -26,10 +28,10 @@ public class Person {
     String surname;
 
     @Column(nullable = false)
-    int age;
+    Integer age;
 
     @Column(nullable = false)
-    int phoneNumber;
+    Integer phoneNumber;
 
     @Column(nullable = false)
     String cityOfLiving;
