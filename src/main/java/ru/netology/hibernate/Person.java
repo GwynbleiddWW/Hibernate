@@ -17,8 +17,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "various_persons", schema = "netology")
 public class Person {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
