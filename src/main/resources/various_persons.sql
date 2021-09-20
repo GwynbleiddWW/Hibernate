@@ -2,6 +2,7 @@ CREATE SCHEMA netology;
 
 CREATE TABLE netology.various_persons
 (
+    id             INT,
     name           VARCHAR(255),
     surname        VARCHAR(255),
     age            INT,
@@ -11,7 +12,7 @@ CREATE TABLE netology.various_persons
 );
 
 INSERT INTO netology.various_persons
-VALUES ('Ben', 'Kenobi', 70, 66, 'Stewjon'),
-       ('Vasya', 'Wasonkin', 18, 551477, 'Moscow');
+VALUES (1,'Ben', 'Kenobi', 70, 66, 'Stewjon'),
+       (2,'Vasya', 'Wasonkin', 18, 551477, 'Moscow');
 
 

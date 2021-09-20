@@ -1,10 +1,12 @@
 package ru.netology.hibernate;
-import com.sun.istack.NotNull;
+
 import lombok.*;
 import org.hibernate.Hibernate;
-import org.springframework.lang.Nullable;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
 
@@ -17,8 +19,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "various_persons", schema = "netology")
 public class Person {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)
