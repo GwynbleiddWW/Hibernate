@@ -1,9 +1,7 @@
 package ru.netology.hibernate;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,8 +41,8 @@ public class Controller {
 
 
     @GetMapping("/username")
-    @PostAuthorize("returnObject.username == authentication.principal.username")
-    public String userName(String username) {
-
+    @PreAuthorize("#username == authentication.principal.username")
+    public String userName(@RequestParam String username) {
+        return "Hello, " + username;
     }
 }
